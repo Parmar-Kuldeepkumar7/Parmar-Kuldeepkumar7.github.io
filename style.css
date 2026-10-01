@@ -4,18 +4,18 @@
    ======================================== */
 
 :root {
-    --bg: #101010;
-    --bg-soft: #151515;
-    --contact-bg: #15161d;
 
-    --card: #191919;
-    --card-hover: #1d1d1d;
+    --bg: #101010;
+    --bg-soft: #141414;
+
+    --card: #181818;
+    --card-hover: #1c1c1c;
 
     --text: #ededeb;
     --text-soft: #c8c8c3;
-    --muted: #8b8b86;
+    --muted: #85858a;
 
-    --border: #2b2b2b;
+    --border: #292929;
     --border-light: #3a3a3a;
 
     --accent: #5b78ff;
@@ -44,6 +44,7 @@ html {
 }
 
 body {
+
     background: var(--bg);
 
     color: var(--text);
@@ -77,6 +78,7 @@ button {
    ======================================== */
 
 .container {
+
     width: min(
         var(--max-width),
         calc(100% - 48px)
@@ -91,6 +93,7 @@ button {
    ======================================== */
 
 .navbar {
+
     position: sticky;
 
     top: 0;
@@ -99,14 +102,15 @@ button {
 
     height: var(--nav-height);
 
-    background: rgba(13, 13, 13, 0.96);
+    background: rgba(13, 13, 13, 0.97);
 
-    border-bottom: 1px solid #191919;
+    border-bottom: 1px solid #1b1b1b;
 
     backdrop-filter: blur(12px);
 }
 
 .nav-container {
+
     height: 100%;
 
     display: flex;
@@ -117,6 +121,7 @@ button {
 }
 
 .logo {
+
     flex-shrink: 0;
 
     font-family: var(--heading-font);
@@ -131,6 +136,7 @@ button {
 }
 
 .nav-links {
+
     display: flex;
 
     align-items: center;
@@ -143,9 +149,10 @@ button {
 }
 
 .nav-links a {
+
     position: relative;
 
-    color: #70727b;
+    color: #73757e;
 
     font-size: 15px;
 
@@ -159,6 +166,7 @@ button {
 }
 
 .nav-links a::after {
+
     content: "";
 
     position: absolute;
@@ -181,6 +189,7 @@ button {
 }
 
 .resume-button {
+
     flex-shrink: 0;
 
     padding: 12px 17px;
@@ -204,6 +213,7 @@ button {
 }
 
 .resume-button:hover {
+
     background: #1e2029;
 
     border-color: #414654;
@@ -212,6 +222,7 @@ button {
 }
 
 .menu-button {
+
     display: none;
 
     margin-left: auto;
@@ -235,6 +246,7 @@ button {
    ======================================== */
 
 .hero {
+
     padding: 82px 0 68px;
 
     border-bottom: 1px solid var(--border);
@@ -245,6 +257,7 @@ button {
 }
 
 .hero h1 {
+
     margin-bottom: 21px;
 
     font-family: var(--heading-font);
@@ -263,6 +276,7 @@ button {
 }
 
 .hero h2 {
+
     max-width: 760px;
 
     margin-bottom: 19px;
@@ -277,9 +291,10 @@ button {
 }
 
 .hero-text {
+
     max-width: 780px;
 
-    color: #8f9199;
+    color: #96979d;
 
     font-size: 16px;
 
@@ -287,6 +302,7 @@ button {
 }
 
 .hero-buttons {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -297,6 +313,7 @@ button {
 }
 
 .button {
+
     display: inline-flex;
 
     align-items: center;
@@ -325,6 +342,7 @@ button {
 }
 
 .primary-button {
+
     background: #ededeb;
 
     color: #111;
@@ -333,18 +351,21 @@ button {
 }
 
 .primary-button:hover {
+
     background: white;
 
     border-color: white;
 }
 
 .secondary-button {
+
     background: transparent;
 
     color: var(--text-soft);
 }
 
 .secondary-button:hover {
+
     background: var(--card);
 
     color: var(--text);
@@ -353,6 +374,7 @@ button {
 }
 
 .currently-learning {
+
     display: flex;
 
     align-items: center;
@@ -367,13 +389,10 @@ button {
 }
 
 .currently-learning strong {
+
     color: #d5d6da;
 
     font-weight: 600;
-}
-
-.currently-learning span {
-    color: #858791;
 }
 
 
@@ -382,10 +401,12 @@ button {
    ======================================== */
 
 .section {
+
     padding: 70px 0;
 }
 
 .section-alt {
+
     background: var(--bg-soft);
 
     border-top: 1px solid #181818;
@@ -394,10 +415,12 @@ button {
 }
 
 .section-heading {
+
     margin-bottom: 38px;
 }
 
 .section-heading h2 {
+
     font-family: var(--heading-font);
 
     font-size: 48px;
@@ -415,6 +438,7 @@ button {
    ======================================== */
 
 .about-grid {
+
     display: grid;
 
     grid-template-columns: 1.2fr 0.85fr;
@@ -427,6 +451,7 @@ button {
 }
 
 .about-text p {
+
     margin-bottom: 19px;
 
     color: #c8c9c5;
@@ -441,16 +466,19 @@ button {
 }
 
 .about-details {
+
     border-top: 1px solid var(--border);
 }
 
 .detail-item {
+
     padding: 17px 0;
 
     border-bottom: 1px solid var(--border);
 }
 
 .detail-item span {
+
     display: block;
 
     margin-bottom: 6px;
@@ -465,6 +493,7 @@ button {
 }
 
 .detail-item strong {
+
     display: block;
 
     margin-bottom: 2px;
@@ -475,6 +504,7 @@ button {
 }
 
 .detail-item small {
+
     display: block;
 
     color: #777a83;
@@ -488,6 +518,7 @@ button {
    ======================================== */
 
 .skills-grid {
+
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
@@ -500,6 +531,7 @@ button {
 }
 
 .skill-group {
+
     min-height: 155px;
 
     padding: 24px;
@@ -508,6 +540,7 @@ button {
 }
 
 .skill-group h3 {
+
     margin-bottom: 16px;
 
     font-family: var(--heading-font);
@@ -518,6 +551,7 @@ button {
 }
 
 .skill-list {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -526,6 +560,7 @@ button {
 }
 
 .skill-list span {
+
     padding: 6px 9px;
 
     background: #222;
@@ -543,6 +578,7 @@ button {
    ======================================== */
 
 .experience-card {
+
     max-width: 900px;
 
     padding: 26px 0;
@@ -557,6 +593,7 @@ button {
 }
 
 .date {
+
     color: #858791;
 
     font-size: 12px;
@@ -569,6 +606,7 @@ button {
 }
 
 .experience-card h3 {
+
     margin: 7px 0 4px;
 
     font-family: var(--heading-font);
@@ -579,12 +617,14 @@ button {
 }
 
 .role {
+
     color: #858791;
 
     font-size: 14px;
 }
 
 .experience-card > p {
+
     max-width: 780px;
 
     color: #c3c4c0;
@@ -595,6 +635,7 @@ button {
 }
 
 .experience-card ul {
+
     max-width: 800px;
 
     margin: 15px 0 20px 20px;
@@ -614,6 +655,7 @@ button {
    ======================================== */
 
 .projects-grid {
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -622,6 +664,7 @@ button {
 }
 
 .project-card {
+
     min-height: 430px;
 
     padding: 24px;
@@ -637,6 +680,7 @@ button {
 }
 
 .project-card:hover {
+
     transform: translateY(-3px);
 
     background: var(--card-hover);
@@ -645,6 +689,7 @@ button {
 }
 
 .project-number {
+
     margin-bottom: 35px;
 
     color: var(--accent);
@@ -657,6 +702,7 @@ button {
 }
 
 .project-type {
+
     margin-bottom: 8px;
 
     color: #777a83;
@@ -669,6 +715,7 @@ button {
 }
 
 .project-card h3 {
+
     font-family: var(--heading-font);
 
     font-size: 27px;
@@ -679,6 +726,7 @@ button {
 }
 
 .project-subtitle {
+
     margin-top: 5px;
 
     color: #777a83;
@@ -687,6 +735,7 @@ button {
 }
 
 .project-content > p:not(.project-type):not(.project-subtitle):not(.contribution) {
+
     margin-top: 16px;
 
     color: #bfc0bc;
@@ -697,6 +746,7 @@ button {
 }
 
 .contribution {
+
     margin-top: 13px;
 
     color: #bfc0bc;
@@ -711,6 +761,7 @@ button {
 }
 
 .tech-list {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -721,6 +772,7 @@ button {
 }
 
 .tech-list span {
+
     padding: 4px 7px;
 
     background: #222;
@@ -730,10 +782,32 @@ button {
     font-size: 10px;
 }
 
-.text-link {
-    display: inline-block;
+
+/* Project links */
+
+.project-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
 
     margin-top: 18px;
+}
+
+.project-links .text-link {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   TEXT LINKS
+   ======================================== */
+
+.text-link {
+
+    display: inline-block;
 
     padding-bottom: 3px;
 
@@ -751,6 +825,7 @@ button {
 }
 
 .text-link:hover {
+
     color: var(--accent);
 
     border-color: var(--accent);
@@ -762,10 +837,12 @@ button {
    ======================================== */
 
 .certifications-list {
+
     border-top: 1px solid var(--border);
 }
 
 .certification-item {
+
     display: flex;
 
     align-items: center;
@@ -780,6 +857,7 @@ button {
 }
 
 .certification-item h3 {
+
     margin: 7px 0 5px;
 
     font-family: var(--heading-font);
@@ -790,6 +868,7 @@ button {
 }
 
 .certification-item p {
+
     color: #858791;
 
     font-size: 14px;
@@ -801,6 +880,7 @@ button {
    ======================================== */
 
 .education-card {
+
     display: flex;
 
     align-items: center;
@@ -817,6 +897,7 @@ button {
 }
 
 .education-card h3 {
+
     margin: 7px 0 5px;
 
     font-family: var(--heading-font);
@@ -827,6 +908,7 @@ button {
 }
 
 .education-card p {
+
     color: #858791;
 
     font-size: 14px;
@@ -835,6 +917,7 @@ button {
 }
 
 .education-score {
+
     min-width: 130px;
 
     padding-left: 28px;
@@ -844,6 +927,7 @@ button {
 
 .education-score span,
 .education-score small {
+
     display: block;
 
     color: #777a83;
@@ -856,6 +940,7 @@ button {
 }
 
 .education-score strong {
+
     display: inline-block;
 
     margin-top: 2px;
@@ -870,15 +955,23 @@ button {
    CONTACT
    ======================================== */
 
+/*
+   IMPORTANT:
+   Same background as main page.
+   No separate blue/grey section.
+*/
+
 .contact-section {
+
     padding: 90px 0 85px;
 
-    background: var(--contact-bg);
+    background: var(--bg);
 
     border-top: 1px solid var(--border);
 }
 
 .contact-content {
+
     max-width: 850px;
 
     margin: 0 auto;
@@ -887,6 +980,7 @@ button {
 }
 
 .contact-content h2 {
+
     margin-bottom: 22px;
 
     font-family: var(--heading-font);
@@ -901,11 +995,12 @@ button {
 }
 
 .contact-content > p {
+
     max-width: 660px;
 
     margin: 0 auto;
 
-    color: #80879a;
+    color: #898b92;
 
     font-size: 18px;
 
@@ -913,6 +1008,7 @@ button {
 }
 
 .contact-links {
+
     display: flex;
 
     align-items: center;
@@ -927,6 +1023,7 @@ button {
 }
 
 .contact-link {
+
     display: inline-flex;
 
     align-items: center;
@@ -939,11 +1036,11 @@ button {
 
     background: transparent;
 
-    border: 1px solid #292d39;
+    border: 1px solid #303030;
 
     border-radius: 6px;
 
-    color: #aeb5c5;
+    color: #c2c3c7;
 
     font-size: 16px;
 
@@ -957,16 +1054,18 @@ button {
 }
 
 .contact-link:hover {
+
     transform: translateY(-2px);
 
-    background: #1c1e27;
+    background: #191919;
 
-    border-color: #414654;
+    border-color: #484848;
 
     color: var(--text);
 }
 
 .contact-primary {
+
     background: #ededeb;
 
     border-color: #ededeb;
@@ -975,6 +1074,7 @@ button {
 }
 
 .contact-primary:hover {
+
     background: white;
 
     border-color: white;
@@ -988,12 +1088,14 @@ button {
    ======================================== */
 
 footer {
+
     background: #0d0d0d;
 
     border-top: 1px solid var(--border);
 }
 
 .footer-content {
+
     display: flex;
 
     align-items: center;
@@ -1035,6 +1137,7 @@ footer {
     }
 
     .resume-button {
+
         font-size: 12px;
 
         padding: 10px 13px;
@@ -1065,6 +1168,7 @@ footer {
     }
 
     .nav-links {
+
         position: absolute;
 
         top: var(--nav-height);
@@ -1095,6 +1199,7 @@ footer {
     }
 
     .nav-links a {
+
         width: 100%;
 
         padding: 11px 0;
@@ -1138,6 +1243,7 @@ footer {
     }
 
     .resume-button {
+
         padding: 9px 11px;
 
         font-size: 11px;
@@ -1151,6 +1257,7 @@ footer {
     }
 
     .hero h1 {
+
         font-size: 48px;
 
         line-height: 0.98;
@@ -1165,6 +1272,7 @@ footer {
     }
 
     .currently-learning {
+
         flex-direction: column;
 
         align-items: flex-start;
@@ -1189,6 +1297,7 @@ footer {
     /* About */
 
     .about-grid {
+
         grid-template-columns: 1fr;
 
         gap: 35px;
@@ -1206,6 +1315,7 @@ footer {
     }
 
     .skill-group {
+
         min-height: auto;
 
         padding: 20px;
@@ -1226,6 +1336,7 @@ footer {
     }
 
     .project-card {
+
         min-height: auto;
 
         padding: 21px;
@@ -1239,6 +1350,7 @@ footer {
     /* Certifications */
 
     .certification-item {
+
         flex-direction: column;
 
         align-items: flex-start;
@@ -1250,6 +1362,7 @@ footer {
     /* Education */
 
     .education-card {
+
         flex-direction: column;
 
         align-items: flex-start;
@@ -1258,6 +1371,7 @@ footer {
     }
 
     .education-score {
+
         width: 100%;
 
         min-width: 0;
@@ -1275,6 +1389,7 @@ footer {
     /* Contact */
 
     .contact-section {
+
         padding: 68px 0 60px;
     }
 
@@ -1287,6 +1402,7 @@ footer {
     }
 
     .contact-links {
+
         flex-direction: column;
 
         gap: 10px;
@@ -1295,6 +1411,7 @@ footer {
     }
 
     .contact-link {
+
         width: 100%;
 
         min-width: 0;
@@ -1304,6 +1421,7 @@ footer {
     /* Footer */
 
     .footer-content {
+
         flex-direction: column;
 
         align-items: flex-start;
@@ -1340,6 +1458,7 @@ footer {
     }
 
     .resume-button {
+
         font-size: 10px;
 
         padding: 8px 9px;
