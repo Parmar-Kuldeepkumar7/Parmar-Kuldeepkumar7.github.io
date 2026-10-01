@@ -1,24 +1,23 @@
 /* ========================================
    KULDEEPKUMAR PARMAR
-   DARK MINIMAL PORTFOLIO
+   OBSIDIAN CARBON THEME
    ======================================== */
 
 :root {
+    --bg: #0b0d0f;
+    --bg-soft: #101315;
+    --carbon: #141719;
+    --carbon-light: #181b1e;
 
-    --bg: #101010;
-    --bg-soft: #141414;
+    --text: #e8e9e7;
+    --text-soft: #c5c8c7;
+    --muted: #858b8e;
 
-    --card: #181818;
-    --card-hover: #1c1c1c;
+    --border: #272c2f;
+    --border-light: #343a3d;
 
-    --text: #ededeb;
-    --text-soft: #c8c8c3;
-    --muted: #85858a;
-
-    --border: #292929;
-    --border-light: #3a3a3a;
-
-    --accent: #5b78ff;
+    --accent: #5c7cff;
+    --accent-soft: #7892ff;
 
     --max-width: 1140px;
     --nav-height: 68px;
@@ -44,17 +43,11 @@ html {
 }
 
 body {
-
     background: var(--bg);
-
     color: var(--text);
-
     font-family: var(--body-font);
-
     font-size: 15px;
-
     line-height: 1.6;
-
     overflow-x: hidden;
 }
 
@@ -78,7 +71,6 @@ button {
    ======================================== */
 
 .container {
-
     width: min(
         var(--max-width),
         calc(100% - 48px)
@@ -93,41 +85,34 @@ button {
    ======================================== */
 
 .navbar {
-
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
 
     height: var(--nav-height);
 
-    background: rgba(13, 13, 13, 0.97);
+    background: rgba(11, 13, 15, 0.96);
 
-    border-bottom: 1px solid #1b1b1b;
+    border-bottom: 1px solid var(--border);
 
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
 }
 
 .nav-container {
-
     height: 100%;
 
     display: flex;
-
     align-items: center;
 
     gap: 30px;
 }
 
 .logo {
-
     flex-shrink: 0;
 
     font-family: var(--heading-font);
 
     font-size: 21px;
-
     font-weight: 600;
 
     letter-spacing: -0.035em;
@@ -136,11 +121,8 @@ button {
 }
 
 .nav-links {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 27px;
@@ -149,13 +131,11 @@ button {
 }
 
 .nav-links a {
-
     position: relative;
 
-    color: #73757e;
+    color: #7f8589;
 
     font-size: 15px;
-
     font-weight: 500;
 
     transition: color 0.2s ease;
@@ -166,17 +146,14 @@ button {
 }
 
 .nav-links a::after {
-
     content: "";
 
     position: absolute;
 
     left: 0;
-
     bottom: -10px;
 
     width: 0;
-
     height: 2px;
 
     background: var(--accent);
@@ -189,21 +166,19 @@ button {
 }
 
 .resume-button {
-
     flex-shrink: 0;
 
     padding: 12px 17px;
 
-    background: #171922;
+    background: #15181b;
 
-    border: 1px solid #292d39;
+    border: 1px solid #30363a;
 
     border-radius: 7px;
 
-    color: #d9dbe2;
+    color: #d9dcda;
 
     font-size: 14px;
-
     font-weight: 600;
 
     transition:
@@ -213,16 +188,14 @@ button {
 }
 
 .resume-button:hover {
+    background: #1b1f22;
 
-    background: #1e2029;
-
-    border-color: #414654;
+    border-color: #454c50;
 
     transform: translateY(-1px);
 }
 
 .menu-button {
-
     display: none;
 
     margin-left: auto;
@@ -246,8 +219,14 @@ button {
    ======================================== */
 
 .hero {
-
     padding: 82px 0 68px;
+
+    background:
+        radial-gradient(
+            circle at 75% 25%,
+            rgba(92, 124, 255, 0.045),
+            transparent 30%
+        );
 
     border-bottom: 1px solid var(--border);
 }
@@ -257,7 +236,6 @@ button {
 }
 
 .hero h1 {
-
     margin-bottom: 21px;
 
     font-family: var(--heading-font);
@@ -276,7 +254,6 @@ button {
 }
 
 .hero h2 {
-
     max-width: 760px;
 
     margin-bottom: 19px;
@@ -284,17 +261,15 @@ button {
     color: var(--text-soft);
 
     font-size: 23px;
-
     font-weight: 500;
 
     line-height: 1.35;
 }
 
 .hero-text {
-
     max-width: 780px;
 
-    color: #96979d;
+    color: #92999c;
 
     font-size: 16px;
 
@@ -302,7 +277,6 @@ button {
 }
 
 .hero-buttons {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -313,21 +287,18 @@ button {
 }
 
 .button {
-
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 11px 17px;
 
     border: 1px solid var(--border);
 
-    border-radius: 3px;
+    border-radius: 4px;
 
     font-size: 13px;
-
     font-weight: 600;
 
     transition:
@@ -342,31 +313,26 @@ button {
 }
 
 .primary-button {
+    background: #e8e9e7;
 
-    background: #ededeb;
+    color: #0d0f10;
 
-    color: #111;
-
-    border-color: #ededeb;
+    border-color: #e8e9e7;
 }
 
 .primary-button:hover {
-
     background: white;
-
     border-color: white;
 }
 
 .secondary-button {
-
     background: transparent;
 
     color: var(--text-soft);
 }
 
 .secondary-button:hover {
-
-    background: var(--card);
+    background: var(--carbon);
 
     color: var(--text);
 
@@ -374,7 +340,6 @@ button {
 }
 
 .currently-learning {
-
     display: flex;
 
     align-items: center;
@@ -383,14 +348,13 @@ button {
 
     margin-top: 31px;
 
-    color: #858791;
+    color: #81878a;
 
     font-size: 13px;
 }
 
 .currently-learning strong {
-
-    color: #d5d6da;
+    color: #d4d7d5;
 
     font-weight: 600;
 }
@@ -401,26 +365,23 @@ button {
    ======================================== */
 
 .section {
-
     padding: 70px 0;
+
+    background: var(--bg);
 }
 
 .section-alt {
-
     background: var(--bg-soft);
 
-    border-top: 1px solid #181818;
-
-    border-bottom: 1px solid #181818;
+    border-top: 1px solid #181c1e;
+    border-bottom: 1px solid #181c1e;
 }
 
 .section-heading {
-
     margin-bottom: 38px;
 }
 
 .section-heading h2 {
-
     font-family: var(--heading-font);
 
     font-size: 48px;
@@ -438,7 +399,6 @@ button {
    ======================================== */
 
 .about-grid {
-
     display: grid;
 
     grid-template-columns: 1.2fr 0.85fr;
@@ -451,10 +411,9 @@ button {
 }
 
 .about-text p {
-
     margin-bottom: 19px;
 
-    color: #c8c9c5;
+    color: #c4c8c6;
 
     font-size: 17px;
 
@@ -466,24 +425,21 @@ button {
 }
 
 .about-details {
-
     border-top: 1px solid var(--border);
 }
 
 .detail-item {
-
     padding: 17px 0;
 
     border-bottom: 1px solid var(--border);
 }
 
 .detail-item span {
-
     display: block;
 
     margin-bottom: 6px;
 
-    color: #777a83;
+    color: #777f83;
 
     font-size: 11px;
 
@@ -493,7 +449,6 @@ button {
 }
 
 .detail-item strong {
-
     display: block;
 
     margin-bottom: 2px;
@@ -504,10 +459,9 @@ button {
 }
 
 .detail-item small {
-
     display: block;
 
-    color: #777a83;
+    color: #777f83;
 
     font-size: 13px;
 }
@@ -518,7 +472,6 @@ button {
    ======================================== */
 
 .skills-grid {
-
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
@@ -531,16 +484,14 @@ button {
 }
 
 .skill-group {
-
     min-height: 155px;
 
     padding: 24px;
 
-    background: var(--card);
+    background: var(--carbon);
 }
 
 .skill-group h3 {
-
     margin-bottom: 16px;
 
     font-family: var(--heading-font);
@@ -551,7 +502,6 @@ button {
 }
 
 .skill-list {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -560,14 +510,13 @@ button {
 }
 
 .skill-list span {
-
     padding: 6px 9px;
 
-    background: #222;
+    background: #1b1f21;
 
-    border: 1px solid #2e2e2e;
+    border: 1px solid #292f32;
 
-    color: #c4c5c1;
+    color: #c2c6c4;
 
     font-size: 12px;
 }
@@ -578,7 +527,6 @@ button {
    ======================================== */
 
 .experience-card {
-
     max-width: 900px;
 
     padding: 26px 0;
@@ -593,8 +541,7 @@ button {
 }
 
 .date {
-
-    color: #858791;
+    color: #858d91;
 
     font-size: 12px;
 
@@ -606,7 +553,6 @@ button {
 }
 
 .experience-card h3 {
-
     margin: 7px 0 4px;
 
     font-family: var(--heading-font);
@@ -617,17 +563,15 @@ button {
 }
 
 .role {
-
-    color: #858791;
+    color: #858d91;
 
     font-size: 14px;
 }
 
 .experience-card > p {
-
     max-width: 780px;
 
-    color: #c3c4c0;
+    color: #c1c5c3;
 
     font-size: 15px;
 
@@ -635,12 +579,11 @@ button {
 }
 
 .experience-card ul {
-
     max-width: 800px;
 
     margin: 15px 0 20px 20px;
 
-    color: #bfc0bc;
+    color: #bdc1bf;
 
     font-size: 14px;
 }
@@ -655,7 +598,6 @@ button {
    ======================================== */
 
 .projects-grid {
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -664,12 +606,11 @@ button {
 }
 
 .project-card {
-
     min-height: 430px;
 
     padding: 24px;
 
-    background: var(--card);
+    background: var(--carbon);
 
     border: 1px solid var(--border);
 
@@ -680,16 +621,14 @@ button {
 }
 
 .project-card:hover {
-
     transform: translateY(-3px);
 
-    background: var(--card-hover);
+    background: var(--carbon-light);
 
     border-color: var(--border-light);
 }
 
 .project-number {
-
     margin-bottom: 35px;
 
     color: var(--accent);
@@ -702,10 +641,9 @@ button {
 }
 
 .project-type {
-
     margin-bottom: 8px;
 
-    color: #777a83;
+    color: #777f83;
 
     font-size: 10px;
 
@@ -715,7 +653,6 @@ button {
 }
 
 .project-card h3 {
-
     font-family: var(--heading-font);
 
     font-size: 27px;
@@ -726,19 +663,17 @@ button {
 }
 
 .project-subtitle {
-
     margin-top: 5px;
 
-    color: #777a83;
+    color: #7c8487;
 
     font-size: 13px;
 }
 
 .project-content > p:not(.project-type):not(.project-subtitle):not(.contribution) {
-
     margin-top: 16px;
 
-    color: #bfc0bc;
+    color: #bec3c1;
 
     font-size: 14px;
 
@@ -746,10 +681,9 @@ button {
 }
 
 .contribution {
-
     margin-top: 13px;
 
-    color: #bfc0bc;
+    color: #bec3c1;
 
     font-size: 13px;
 
@@ -761,7 +695,6 @@ button {
 }
 
 .tech-list {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -772,21 +705,21 @@ button {
 }
 
 .tech-list span {
-
     padding: 4px 7px;
 
-    background: #222;
+    background: #1c2022;
 
-    color: #858791;
+    color: #858d91;
 
     font-size: 10px;
 }
 
 
-/* Project links */
+/* ========================================
+   PROJECT LINKS
+   ======================================== */
 
 .project-links {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -796,18 +729,15 @@ button {
     margin-top: 18px;
 }
 
-.project-links .text-link {
-    margin-top: 0;
-}
-
 
 /* ========================================
    TEXT LINKS
    ======================================== */
 
 .text-link {
+    display: inline-flex;
 
-    display: inline-block;
+    align-items: center;
 
     padding-bottom: 3px;
 
@@ -817,7 +747,7 @@ button {
 
     font-weight: 600;
 
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #555d60;
 
     transition:
         color 0.2s ease,
@@ -825,10 +755,51 @@ button {
 }
 
 .text-link:hover {
-
-    color: var(--accent);
+    color: var(--accent-soft);
 
     border-color: var(--accent);
+}
+
+
+/* ========================================
+   VERIFICATION LINKS
+   ======================================== */
+
+/*
+   Bigger and closer to the certificate /
+   internship information.
+*/
+
+.certification-item .text-link,
+.experience-card > .text-link {
+    font-size: 15px;
+
+    padding: 9px 14px;
+
+    border: 1px solid #343a3d;
+
+    border-radius: 5px;
+
+    background: #15181a;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.certification-item .text-link:hover,
+.experience-card > .text-link:hover {
+    background: #1c2023;
+
+    border-color: var(--accent);
+
+    color: var(--text);
+
+    transform: translateY(-1px);
 }
 
 
@@ -837,7 +808,6 @@ button {
    ======================================== */
 
 .certifications-list {
-
     border-top: 1px solid var(--border);
 }
 
@@ -847,17 +817,20 @@ button {
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: flex-start;
 
-    gap: 30px;
+    gap: 32px;
 
     padding: 25px 0;
 
     border-bottom: 1px solid var(--border);
 }
 
-.certification-item h3 {
+.certification-item > div {
+    min-width: 0;
+}
 
+.certification-item h3 {
     margin: 7px 0 5px;
 
     font-family: var(--heading-font);
@@ -868,8 +841,7 @@ button {
 }
 
 .certification-item p {
-
-    color: #858791;
+    color: #858d91;
 
     font-size: 14px;
 }
@@ -880,7 +852,6 @@ button {
    ======================================== */
 
 .education-card {
-
     display: flex;
 
     align-items: center;
@@ -891,13 +862,12 @@ button {
 
     padding: 28px;
 
-    background: var(--card);
+    background: var(--carbon);
 
     border: 1px solid var(--border);
 }
 
 .education-card h3 {
-
     margin: 7px 0 5px;
 
     font-family: var(--heading-font);
@@ -908,8 +878,7 @@ button {
 }
 
 .education-card p {
-
-    color: #858791;
+    color: #858d91;
 
     font-size: 14px;
 
@@ -917,7 +886,6 @@ button {
 }
 
 .education-score {
-
     min-width: 130px;
 
     padding-left: 28px;
@@ -927,10 +895,9 @@ button {
 
 .education-score span,
 .education-score small {
-
     display: block;
 
-    color: #777a83;
+    color: #777f83;
 
     font-size: 10px;
 
@@ -940,7 +907,6 @@ button {
 }
 
 .education-score strong {
-
     display: inline-block;
 
     margin-top: 2px;
@@ -955,14 +921,7 @@ button {
    CONTACT
    ======================================== */
 
-/*
-   IMPORTANT:
-   Same background as main page.
-   No separate blue/grey section.
-*/
-
 .contact-section {
-
     padding: 90px 0 85px;
 
     background: var(--bg);
@@ -971,7 +930,6 @@ button {
 }
 
 .contact-content {
-
     max-width: 850px;
 
     margin: 0 auto;
@@ -980,7 +938,6 @@ button {
 }
 
 .contact-content h2 {
-
     margin-bottom: 22px;
 
     font-family: var(--heading-font);
@@ -995,12 +952,11 @@ button {
 }
 
 .contact-content > p {
-
     max-width: 660px;
 
     margin: 0 auto;
 
-    color: #898b92;
+    color: #888f93;
 
     font-size: 18px;
 
@@ -1008,7 +964,6 @@ button {
 }
 
 .contact-links {
-
     display: flex;
 
     align-items: center;
@@ -1017,13 +972,12 @@ button {
 
     flex-wrap: wrap;
 
-    gap: 24px;
+    gap: 14px;
 
     margin-top: 38px;
 }
 
 .contact-link {
-
     display: inline-flex;
 
     align-items: center;
@@ -1036,11 +990,11 @@ button {
 
     background: transparent;
 
-    border: 1px solid #303030;
+    border: 1px solid #303638;
 
     border-radius: 6px;
 
-    color: #c2c3c7;
+    color: #c4c8c7;
 
     font-size: 16px;
 
@@ -1054,32 +1008,29 @@ button {
 }
 
 .contact-link:hover {
-
     transform: translateY(-2px);
 
-    background: #191919;
+    background: #181b1d;
 
-    border-color: #484848;
+    border-color: #474e52;
 
     color: var(--text);
 }
 
 .contact-primary {
+    background: #e7e9e7;
 
-    background: #ededeb;
+    border-color: #e7e9e7;
 
-    border-color: #ededeb;
-
-    color: #111;
+    color: #0d0f10;
 }
 
 .contact-primary:hover {
-
     background: white;
 
     border-color: white;
 
-    color: #111;
+    color: #0d0f10;
 }
 
 
@@ -1088,14 +1039,12 @@ button {
    ======================================== */
 
 footer {
-
-    background: #0d0d0d;
+    background: #080a0b;
 
     border-top: 1px solid var(--border);
 }
 
 .footer-content {
-
     display: flex;
 
     align-items: center;
@@ -1104,7 +1053,7 @@ footer {
 
     padding: 20px 0;
 
-    color: #70727b;
+    color: #70777a;
 
     font-size: 12px;
 }
@@ -1137,7 +1086,6 @@ footer {
     }
 
     .resume-button {
-
         font-size: 12px;
 
         padding: 10px 13px;
@@ -1168,13 +1116,11 @@ footer {
     }
 
     .nav-links {
-
         position: absolute;
 
         top: var(--nav-height);
 
         left: 0;
-
         right: 0;
 
         display: none;
@@ -1189,7 +1135,7 @@ footer {
 
         padding: 12px 24px 18px;
 
-        background: #131313;
+        background: #101315;
 
         border-bottom: 1px solid var(--border);
     }
@@ -1199,7 +1145,6 @@ footer {
     }
 
     .nav-links a {
-
         width: 100%;
 
         padding: 11px 0;
@@ -1243,7 +1188,6 @@ footer {
     }
 
     .resume-button {
-
         padding: 9px 11px;
 
         font-size: 11px;
@@ -1257,7 +1201,6 @@ footer {
     }
 
     .hero h1 {
-
         font-size: 48px;
 
         line-height: 0.98;
@@ -1272,7 +1215,6 @@ footer {
     }
 
     .currently-learning {
-
         flex-direction: column;
 
         align-items: flex-start;
@@ -1297,7 +1239,6 @@ footer {
     /* About */
 
     .about-grid {
-
         grid-template-columns: 1fr;
 
         gap: 35px;
@@ -1315,7 +1256,6 @@ footer {
     }
 
     .skill-group {
-
         min-height: auto;
 
         padding: 20px;
@@ -1336,7 +1276,6 @@ footer {
     }
 
     .project-card {
-
         min-height: auto;
 
         padding: 21px;
@@ -1350,19 +1289,23 @@ footer {
     /* Certifications */
 
     .certification-item {
-
         flex-direction: column;
 
         align-items: flex-start;
 
-        gap: 12px;
+        gap: 16px;
+    }
+
+    .certification-item .text-link {
+        font-size: 14px;
+
+        padding: 8px 13px;
     }
 
 
     /* Education */
 
     .education-card {
-
         flex-direction: column;
 
         align-items: flex-start;
@@ -1371,7 +1314,6 @@ footer {
     }
 
     .education-score {
-
         width: 100%;
 
         min-width: 0;
@@ -1389,7 +1331,6 @@ footer {
     /* Contact */
 
     .contact-section {
-
         padding: 68px 0 60px;
     }
 
@@ -1402,7 +1343,6 @@ footer {
     }
 
     .contact-links {
-
         flex-direction: column;
 
         gap: 10px;
@@ -1411,7 +1351,6 @@ footer {
     }
 
     .contact-link {
-
         width: 100%;
 
         min-width: 0;
@@ -1421,7 +1360,6 @@ footer {
     /* Footer */
 
     .footer-content {
-
         flex-direction: column;
 
         align-items: flex-start;
@@ -1458,7 +1396,6 @@ footer {
     }
 
     .resume-button {
-
         font-size: 10px;
 
         padding: 8px 9px;
