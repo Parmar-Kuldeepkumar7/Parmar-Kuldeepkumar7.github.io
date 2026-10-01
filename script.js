@@ -1,53 +1,127 @@
-/* ========================================
+/* =========================================
    KULDEEPKUMAR PARMAR
    PORTFOLIO JAVASCRIPT
-   ======================================== */
+   ========================================= */
 
 
-/* =========================
-   MOBILE NAVIGATION
-   ========================= */
-
-const menuButton = document.getElementById("menuButton");
-const navLinks = document.getElementById("navLinks");
+document.addEventListener("DOMContentLoaded", () => {
 
 
-if (menuButton && navLinks) {
+    /* =========================================
+       MOBILE NAVIGATION
+       ========================================= */
 
-    menuButton.addEventListener("click", () => {
+    const menuButton =
+        document.getElementById("menuButton");
 
-        navLinks.classList.toggle("active");
-
-    });
-
-
-    const navigationLinks =
-        navLinks.querySelectorAll("a");
+    const navLinks =
+        document.getElementById("navLinks");
 
 
-    navigationLinks.forEach((link) => {
+    if (menuButton && navLinks) {
 
-        link.addEventListener("click", () => {
+        menuButton.addEventListener("click", () => {
 
-            navLinks.classList.remove("active");
+            navLinks.classList.toggle("active");
 
         });
 
-    });
+
+        const links =
+            navLinks.querySelectorAll("a");
 
 
-    document.addEventListener("click", (event) => {
+        links.forEach(link => {
 
-        const clickedInsideNavigation =
-            navLinks.contains(event.target);
+            link.addEventListener("click", () => {
 
-        const clickedMenuButton =
-            menuButton.contains(event.target);
+                navLinks.classList.remove("active");
 
+            });
+
+        });
+
+    }
+
+
+
+    /* =========================================
+       ACTIVE NAVIGATION
+       ========================================= */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const navigationLinks =
+        document.querySelectorAll(".nav-link");
+
+
+    const updateActiveLink = () => {
+
+        let currentSection = "home";
+
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 120;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY <
+                sectionTop + sectionHeight
+            ) {
+
+                currentSection =
+                    section.getAttribute("id");
+
+            }
+
+        });
+
+
+        navigationLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+
+            const href =
+                link.getAttribute("href");
+
+
+            if (href === `#${currentSection}`) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    };
+
+
+    window.addEventListener(
+        "scroll",
+        updateActiveLink
+    );
+
+
+    updateActiveLink();
+
+
+
+    /* =========================================
+       CLOSE MOBILE MENU ON RESIZE
+       ========================================= */
+
+    window.addEventListener("resize", () => {
 
         if (
-            !clickedInsideNavigation &&
-            !clickedMenuButton
+            window.innerWidth > 850 &&
+            navLinks
         ) {
 
             navLinks.classList.remove("active");
@@ -56,20 +130,98 @@ if (menuButton && navLinks) {
 
     });
 
-}
 
 
-/* =========================
-   CURRENT YEAR
-   ========================= */
+    /* =========================================
+       SMOOTH SCROLL
+       ========================================= */
 
-const footerYear =
-    document.querySelector(".footer-content span");
+    document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
+
+            anchor.addEventListener(
+                "click",
+                function (event) {
+
+                    const targetId =
+                        this.getAttribute("href");
+
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+
+                        return;
+
+                    }
 
 
-if (footerYear) {
+                    const target =
+                        document.querySelector(targetId);
 
-    footerYear.textContent =
-        `© ${new Date().getFullYear()} Kuldeepkumar Parmar`;
 
-}
+                    if (!target) {
+
+                        return;
+
+                    }
+
+
+                    event.preventDefault();
+
+
+                    const navHeight = 68;
+
+
+                    const targetPosition =
+                        target.getBoundingClientRect().top +
+                        window.scrollY -
+                        navHeight;
+
+
+                    window.scrollTo({
+
+                        top: targetPosition,
+
+                        behavior: "smooth"
+
+                    });
+
+                }
+            );
+
+        });
+
+
+
+    /* =========================================
+       CURRENT YEAR
+       ========================================= */
+
+    const footer =
+        document.querySelector("footer");
+
+
+    if (footer) {
+
+        const year =
+            new Date().getFullYear();
+
+
+        const copyright =
+            footer.querySelector(
+                ".footer-content span"
+            );
+
+
+        if (copyright) {
+
+            copyright.textContent =
+                `© ${year} Kuldeepkumar Parmar`;
+
+        }
+
+    }
+
+});
