@@ -34,7 +34,7 @@ I'm a fast learner who enjoys exploring new technologies and learning by buildin
 ## Contact
 
 - GitHub: https://github.com/Parmar-Kuldeepkumar7
-- LinkedIn: https://www.linkedin.com/in/gj-cp-gecpl-2027-026-kuldeep?utm_source=share_via&utm_content=profile&utm_medium=member_android
+- LinkedIn: https://www.linkedin.com/in/gj-cp-gecpl-2027-026-kuldeep
 - Email: kuldipparmar9222@gmail.com
 
 ---
